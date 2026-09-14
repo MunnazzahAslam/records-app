@@ -1,0 +1,28 @@
+.state-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 64px 24px;
+  text-align: center;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.state-panel h2 {
+  margin: 0;
+}
+
+.state-panel-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.error-panel {
+  border-color: var(--color-danger-border);
+  background: var(--color-danger-bg);
+}

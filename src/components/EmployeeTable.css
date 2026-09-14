@@ -1,0 +1,154 @@
+.employee-table {
+  --employee-columns: 56px minmax(180px, 1.3fr) minmax(200px, 2fr) minmax(120px, 1fr) minmax(150px, 1.3fr) 110px 96px;
+  --employee-columns-min-width: 912px;
+
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Header and body scroll together as one unit below the table's minimum
+   column width, so on narrow viewports the table scrolls horizontally
+   instead of clipping columns or losing header/column alignment. */
+.employee-table-scroll-x {
+  overflow-x: auto;
+}
+
+.employee-table-row {
+  display: grid;
+  grid-template-columns: var(--employee-columns);
+  min-width: var(--employee-columns-min-width);
+  align-items: center;
+}
+
+.employee-table-header-row {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.employee-cell {
+  padding: 14px 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.employee-cell-header {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.employee-cell-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-avatar {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.employee-name-text {
+  font-size: 14px;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.employee-cell:not(.employee-cell-name) {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.employee-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text);
+}
+
+.employee-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-neutral-dot);
+}
+
+.employee-status-active .employee-status-dot {
+  background: var(--color-success);
+}
+
+.employee-status-inactive .employee-status-dot {
+  background: var(--color-neutral-dot);
+}
+
+.employee-cell-actions {
+  display: flex;
+  gap: 4px;
+  white-space: normal;
+}
+
+.employee-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+
+  &:hover {
+    background: var(--color-chip-bg);
+    color: var(--color-text);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+}
+
+.employee-table-scroll {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.employee-table-sizer {
+  position: relative;
+  width: 100%;
+  min-width: var(--employee-columns-min-width);
+}
+
+.employee-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-fast);
+}
+
+.employee-row:hover {
+  background: var(--color-bg);
+}

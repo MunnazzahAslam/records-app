@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Surfaces */
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-border: #e5e5e5;
+
+  /* Text */
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b7280;
+
+  /* Actions */
+  --color-primary: #111111;
+  --color-primary-border: rgba(17, 17, 17, 0.35);
+  --color-on-primary: #ffffff;
+  --color-chip-bg: #f3f4f6;
+
+  /* Status */
+  --color-success: #16a34a;
+  --color-neutral-dot: #9ca3af;
+  --color-danger: #dc2626;
+  --color-danger-bg: rgba(220, 38, 38, 0.08);
+  --color-danger-border: rgba(220, 38, 38, 0.4);
+
+  --shadow:
+    rgba(0, 0, 0, 0.06) 0 1px 2px, rgba(0, 0, 0, 0.08) 0 8px 24px -4px;
+
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --transition-fast: 160ms ease;
+
+  font: 15px/145% var(--font-sans);
+  color-scheme: light dark;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f0f10;
+    --color-surface: #1a1a1c;
+    --color-border: #2a2a2e;
+
+    --color-text: #f5f5f5;
+    --color-text-muted: #9ca3af;
+
+    --color-primary: #f5f5f5;
+    --color-primary-border: rgba(245, 245, 245, 0.35);
+    --color-on-primary: #111111;
+    --color-chip-bg: #26262a;
+
+    --color-success: #4ade80;
+    --color-neutral-dot: #71717a;
+    --color-danger: #f87171;
+    --color-danger-bg: rgba(248, 113, 113, 0.12);
+    --color-danger-border: rgba(248, 113, 113, 0.4);
+
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 1px 2px, rgba(0, 0, 0, 0.5) 0 8px 24px -4px;
+  }
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+}
