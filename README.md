@@ -6,8 +6,6 @@ backed by a real REST API (MockAPI.io). Create/edit/delete all round-trip
 through the API (POST/PUT/DELETE) before local state changes, and every
 outcome — success or failure — surfaces as a bottom-center snackbar.
 
-<img width="1470" height="956" alt="Screenshot 2026-09-14 at 2 26 00 PM" src="https://github.com/user-attachments/assets/a77e47ef-51e4-4bdc-a5b3-76d0e429329c" />
-
 ## 1. Getting started
 
 ### Prerequisites
