@@ -199,6 +199,7 @@ matter for perceived responsiveness.
 | `react` / `react-dom` | The UI framework and its DOM renderer — required by the stack choice. |
 | `@tanstack/react-table` | Headless, typed table/column-model library; drives `EmployeeTable`'s column definitions without bundling any UI or CSS to override. |
 | `@tanstack/react-virtual` | Row virtualization — keeps the table's DOM node count constant regardless of dataset size, which the performance requirements depend on. |
+| `@vercel/analytics` | Page-view analytics for the Vercel deployment; mounted once as `<Analytics />` in `main.tsx` via the framework-agnostic `@vercel/analytics/react` entry point (not `/next` — this is a Vite app, not Next.js). |
 | `typescript` *(dev)* | Static typing across the codebase, run in strict mode. |
 | `vite` *(dev)* | Dev server (fast HMR, native ESM) and production bundler. |
 | `@vitejs/plugin-react` *(dev)* | Enables React JSX transform + Fast Refresh in Vite. |
